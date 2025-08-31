@@ -34,4 +34,8 @@ class TaskViewModel(application: Application) : AndroidViewModel(application) {
             repository.removeTask(task)
         }
     }
+
+    fun clearAllTasks()=viewModelScope.launch {
+        repository.clearAllTask()
+    }
 }
